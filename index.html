@@ -5,50 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <ul id="list">
-        <li>Джон</li>
-        <li>Пит</li>
-        <li>Джессика</li>
-        <li>Сара</li>
-      </ul>
+      <h1>Задание 1</h1>
+      <input type="text" id="inputOne" />
+      <ul id="list"></ul>
     </header>
     <main>
-      <h1 class="forRemove">Hello</h1>
-      <p class="forRemove">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
-        quidem.
-      </p>
-      <p class="forRemove">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-        ipsum laborum nesciunt hic nemo quas explicabo tempora quasi neque
-        adipisci.
-      </p>
-      <select id="yearSelect"></select>
+      <h1>Задание 2</h1>
+      <input type="content" id="inputTwo" />
+      <h1>Задание 3</h1>
+      <form id="myForm">
+        <input type="text" id="textInput" />
+        <button type="submit">Отправить список</button>
+      </form>
+      <ul id="listOne"></ul>
     </main>
     <footer>
-      <div>
-        // 10 задание
-        <article>
-          <p>
-            Lorem ipsum dolor sit amet, odio omnesque ius cu, quo ex atqui
-            antiopam. At detracto menandri eos. Duo in causae viderer, graeci
-            <a href="#">reprehendunt</a> has in. Decore
-            <mark>nemore</mark> philosophia te pro, nobis legere causae ex mei,
-            odio putant mentitum ea ius. Vix nostro deserunt explicari eu.
-          </p>
-        </article>
-      </div>
-      <ul>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link2</a></li>
-        <li><a href="#">Link3</a></li>
-        <li><a href="#">Link4</a></li>
-      </ul>
-      <span></span>
-      <a href="#">Some link</a>
+      <h1>Задание 4</h1>
+      <h2>Калькулятор</h2>
+      <form id="twoForm">
+        <input type="text" id="numOne" placeholder="Введите первое число " />
+        <select id="operation">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" id="numTwo" placeholder="Введите второе число " />
+        <button type="submit">Результат</button>
+      </form>
+
+      <div id="result"></div>
+      <h1>Задание 5</h1>
+      <button class="buy" id="buy">Купить</button>
     </footer>
   </body>
 </html>
