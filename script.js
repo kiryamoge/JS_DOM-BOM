@@ -5,11 +5,9 @@
     const list = document.getElementById('list');
     inputOne.addEventListener('keydown', (event) => {
       const key = event.key; 
-      if (key !== ''){
         const listItem = document.createElement('li');
         listItem.textContent = key;
         list.appendChild(listItem);
-      }
     })
 
 
@@ -89,8 +87,8 @@ buyButton.addEventListener('mouseover', () => {
     buyButton.style.borderRadius = `${getRandomInt(0,40)}px`
 })
 buyButton.addEventListener('mouseleave', () => {
-  buyButton.style.transform = `${getRandomInt(-180,180)}deg`
+  buyButton.style.transform = `rotate(${getRandomInt(-180,180)}deg`
 })
 buyButton.addEventListener('mouseenter', () => {
-  buyButton.style.backgroundColor = `${getRandomInt(0,255)}`
+  buyButton.style.backgroundColor = `rgb(${getRandomInt(0,255)}, ${getRandomInt(0,255)}, ${getRandomInt(0,255)})`
 })
