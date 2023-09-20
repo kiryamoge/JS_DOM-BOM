@@ -4,43 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Задание 1</h1>
-      <input type="text" id="inputOne" />
-      <ul id="list"></ul>
-    </header>
-    <main>
-      <h1>Задание 2</h1>
-      <input type="content" id="inputTwo" />
-      <h1>Задание 3</h1>
-      <form id="myForm">
-        <input type="text" id="textInput" />
-        <button type="submit">Отправить список</button>
+    <div class="container">
+      <h1>Список задач</h1>
+      <form>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Введите задачу"
+          />
+          <button class="btn btn-outline-secondary">Добавить</button>
+        </div>
       </form>
-      <ul id="listOne"></ul>
-    </main>
-    <footer>
-      <h1>Задание 4</h1>
-      <h2>Калькулятор</h2>
-      <form id="twoForm">
-        <input type="text" id="numOne" placeholder="Введите первое число " />
-        <select id="operation">
-          <option value="+">+</option>
-          <option value="-">-</option>
-          <option value="*">*</option>
-          <option value="/">/</option>
-        </select>
-        <input type="text" id="numTwo" placeholder="Введите второе число " />
-        <button type="submit">Результат</button>
-      </form>
-
-      <div id="result"></div>
-      <h1>Задание 5</h1>
-      <button class="buy" id="buy">Купить</button>
-    </footer>
+      <ul class="list-group">
+        <!-- <li class="list-group-item">
+          <label class="form-check-label">
+            <input
+              class="form-check-input me-1"
+              type="checkbox"
+              value=""
+            />Third checkbox</label
+          >
+        </li> -->
+      </ul>
+    </div>
   </body>
 </html>
