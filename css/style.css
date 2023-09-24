@@ -8,74 +8,80 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-button{
+.container{
+    display: flex;
+}
+
+.sidebar{
+    width: 0;
+    height: 900px;
+    background-color: rgb(41, 39, 39);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.burger-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
     cursor: pointer;
 }
 
-.container{
-    max-width: 1000px;
-    margin: auto;
+nav{
+    display: flex;
+    align-items: center;
 }
 
-section{
-    padding: 45px 0;
+ul{
+    list-style: none;
+    padding: 30px;
 }
 
-.hero{
-    background-color: violet;
-    text-align: center;
+li{
+    margin-bottom: 20px;
 }
 
-.hero p{
-    margin: 20px 0;
+a{
+    text-decoration: none;
+    color: gray;
+    font-size: 30px;
 }
 
-.popup-btn{
-    padding: 15px 35px;
-    background-color: rgb(150, 16, 150);
+.close-btn{
+    padding: 8px 20px;
+    background-color: red;
+    color: aliceblue;
     border: none;
     border-radius: 30px;
-    font-size: 20px;
-    color: #fff;
-}
-
-.popup-btn:hover{
-    background-color: rgb(150, 16, 150);
-    box-shadow: 0 0 5px rgb(150, 16, 150), 0 0 25px rgb(150, 16, 150), 0 0 50px rgb(150, 16, 150) 0 0 200px rgb(150, 16, 150);
-    transition: .3s;
-}
-
-.popup{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0,  0.701);
-    top: 0;
-    left: 0;
-    transition: .8s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-.popup.opened{
-    opacity: 1;
-    visibility: visible;
-}
-
-.popup__content{
-    max-width: 600px;
-    background-color: beige;
-    padding: 30px;
-    position: relative;
-}
-
-.popup__close{
     position: absolute;
-    right: 5px;
-    top: 5px;
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
+
+.content{
+    padding: 60px;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.content.active{
+    margin-left: 250px;
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        width: 250px;
+    }
+
+    .content.active {
+        margin-left: 0;
+    }
+
+    .close-btn {
+        display: block;
+    }
+  }
