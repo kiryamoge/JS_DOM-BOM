@@ -1,34 +1,37 @@
-const form = document.querySelector('form'),
-input = form.querySelector('.form-control'),
-ul = document.querySelector('.list-group');
+// JS
+// - Соберите в переменные необходимые элементы: кнопку для открытия окошка, само окошко вместе с фоном, окошко без фона, кнопку закрытия окошка.
+// - Повесьте обработчик клика на кнопку открытия - к окошку должен добавляться класс, в котором через CSS задана видимость блока.
+// Чтобы добавить класс к DOM-элементу, используется метод element.classList.add('classname')
+// - Повесьте обработчик клика на кнопку закрытия окошка - при этом должен удаляться класс, который добавляли в предыдущем обработчике.
+// Чтобы удалить класс из DOM-элемента, используется метод element.classList.remove('classname')
+// - Повесьте обработчик клика на глобальный объект window, чтобы реализовать закрытие окошка по клику на тёмную область. Т.к. эта область является "оболочкой" окошка, мы должны проверить, была ли именно эта область целью клика (не центральная, основная часть окошка, а именно тёмная).
+// Для обращения к элементу, на который пришелся клик, можно использовать свойство объекта события -
+// event.target (event - это параметр функции-обработчика события,  и его свойство target точно указывает на тот элемент, на который кликнул пользователь).
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    ul.innerHTML += `<li class="list-group-item">
-    <label class="form-check-label">
-      <input
-        class="form-check-input me-1"
-        type="checkbox"
-        value=""
-      />${input.value}<button type="button" class="btn btn-outline-danger">Удалить</button></label
-    >
-  </li>`
-  input.value = '';
-  ul.querySelectorAll('.list-group-item').forEach(li => {
-    li.addEventListener('click', () => {
-        const checkbox = li.querySelector('.form-check-input');
-        if(checkbox.checked){
-            li.classList.add('list-group-item-success');
-            checkbox.setAttribute('checked', 'true');
-        } else{
-            li.classList.remove('list-group-item-success');
-            checkbox.removeAttribute('checked');
-        }
-    })
-       const btn = li.querySelector('.btn');
-       btn.addEventListener('click', (event) =>{
-       const btn = event.target.closest('.form-check-label');
-       btn.parentElement.remove();
-    })
-  })
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('popup'); // окошко 
+    const popupBtn = document.getElementById('call-back'); // Копка для открытия окошка
+    const popupCloseBtn = document.querySelector('.popup__close'); // Кнопка закрытия окошка
+
+popupBtn.addEventListener('click', (element) => {
+    if(element.closest('.popup-btn')) {
+        document.body.popup.classList.add('popup.opened');
+    }  
+});
+
+popupCloseBtn.addEventListener('click', (element) => {
+    if(element.closest('.popup__close')) {
+        document.body.popup.classList.remove('popup.opened');
+    }
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === popup) {
+    document.body.popup.classList.remove('popup');
+  }
+});
 })
+
+
+
+
