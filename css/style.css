@@ -1,85 +1,34 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-button{
-    cursor: pointer;
-}
-
 .container{
     max-width: 1000px;
     margin: auto;
 }
-
-section{
-    padding: 45px 0;
-}
-
-.hero{
-    background-color: violet;
-    text-align: center;
-}
-
-.hero p{
-    margin: 20px 0;
-}
-
-.popup-btn{
-    padding: 15px 35px;
-    background-color: rgb(150, 16, 150);
-    border: none;
-    border-radius: 30px;
-    font-size: 20px;
-    color: #fff;
-}
-
-.popup-btn:hover{
-    background-color: rgb(150, 16, 150);
-    box-shadow: 0 0 5px rgb(150, 16, 150), 0 0 25px rgb(150, 16, 150), 0 0 50px rgb(150, 16, 150) 0 0 200px rgb(150, 16, 150);
-    transition: .3s;
-}
-
-.popup{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.701);
-    top: 0;
-    left: 0;
-    transition: .8s;
+.images{
+    background: rgba(51, 51, 51, 0.25);
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 50px;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
+    gap: 40px;
+    margin-top: 300px;
+    padding: 40px;
 }
-
-.popup.opened{
-    display: flex;
-    opacity: 1;
-    visibility: visible;
+.galleryimage{
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: .7s;
 }
-
-.popup__content{
-    max-width: 600px;
-    background-color: beige;
-    padding: 30px;
-    position: relative;
+.galleryimage:hover{
+    transform: scale(1.10)
+    
 }
-
-.popup__close{
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
+.selectedimage{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
