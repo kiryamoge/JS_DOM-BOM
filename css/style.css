@@ -3,25 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: backroung-image .7s;
+}
 .container{
     max-width: 1000px;
     margin: auto;
 }
 .images{
-    background: rgba(51, 51, 51, 0.25);
+    background: rgba(57, 56, 56, 0.45);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 40px;
-    margin-top: 300px;
     padding: 40px;
 }
 .galleryimage{
     width: 300px;
-    height: auto;
     cursor: pointer;
     transition: .7s;
 }
-.galleryimage:hover{
+.galleryimage:hover, .active{
     transform: scale(1.10)
     
 }
